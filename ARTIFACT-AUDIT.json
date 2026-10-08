@@ -1,0 +1,15 @@
+{
+  "modId": "rftoolsutility",
+  "originalJar": "rftoolsutility-26.1.2-8.0.0-atm11.jar",
+  "originalSha256": "381905444be30720b2ec91caae7b10af24218fbdd4acd1c81cb962c1fac967b2",
+  "sha256": "0e909b1d8711ef53a9947c57472d6d2f192de7d28779f6eb1df0aa8230182b9c",
+  "classes": 292,
+  "classMajors": [
+    69
+  ],
+  "archiveIntegrity": "PASS",
+  "licenseUrl": "https://raw.githubusercontent.com/McJtyMods/RFToolsUtility/1.21_neo/LICENSE",
+  "licenseEmbedded": true,
+  "exactModifiedSourceAvailable": false,
+  "validation": "Previously compiled Java 25 artifact found installed in the ATM11 instance and listed in its mod inventory. ZIP integrity, mod metadata and bytecode version verified. Full gameplay functionality was not retested during publication. The exact modified source tree was not located in the inspected folders."
+}
