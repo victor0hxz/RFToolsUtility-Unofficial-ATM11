@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:slime",
+  "id": "rftoolsutility:minecraft_slime",
+  "item1": {
+    "amount": 0.1,
+    "object": "#c:slime_balls"
+  },
+  "item2": {
+    "amount": 0.5,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 15.0,
+    "object": []
+  },
+  "power": 600
+}

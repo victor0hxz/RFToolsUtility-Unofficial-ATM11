@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:bee",
+  "id": "rftoolsutility:minecraft_bee",
+  "item1": {
+    "amount": 0.1,
+    "object": "minecraft:honey_block"
+  },
+  "item2": {
+    "amount": 0.5,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 30.0,
+    "object": []
+  },
+  "power": 1000
+}

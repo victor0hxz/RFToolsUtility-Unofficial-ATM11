@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "rftoolsbase:machine_frame",
+    "T": "minecraft:redstone_torch",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "rrr",
+    "TFT",
+    "rrr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:dialing_device"
+  }
+}

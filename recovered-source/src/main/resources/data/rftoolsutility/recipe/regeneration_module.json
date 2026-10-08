@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:witch",
+  "pattern": {
+    "key": {
+      "P": "rftoolsutility:module_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:golden_apple"
+    },
+    "pattern": [
+      "fSf",
+      "fPf",
+      "fff"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:regeneration_module"
+  },
+  "syringe": 1
+}

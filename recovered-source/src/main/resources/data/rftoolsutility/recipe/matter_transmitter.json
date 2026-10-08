@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "rftoolsbase:machine_frame",
+    "i": "#c:ingots/iron",
+    "o": "#c:ender_pearls",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "ooo",
+    "rFr",
+    "iii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:matter_transmitter"
+  }
+}

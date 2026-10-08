@@ -1,0 +1,23 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:iron_golem",
+  "pattern": {
+    "key": {
+      "E": "rftoolsbase:infused_enderpearl",
+      "P": "rftoolsutility:moduleplus_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:iron_block"
+    },
+    "pattern": [
+      "fSf",
+      "EPE",
+      "fEf"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:peaceful_module"
+  },
+  "syringe": 1
+}

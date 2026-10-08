@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:illusioner",
+  "id": "rftoolsutility:minecraft_illusioner",
+  "item1": {
+    "amount": 0.1,
+    "object": "#c:gems/emerald"
+  },
+  "item2": {
+    "amount": 0.2,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 20.0,
+    "object": []
+  },
+  "power": 2000
+}

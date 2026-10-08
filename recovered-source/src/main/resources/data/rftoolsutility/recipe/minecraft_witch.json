@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:witch",
+  "id": "rftoolsutility:minecraft_witch",
+  "item1": {
+    "amount": 0.1,
+    "object": "minecraft:glass_bottle"
+  },
+  "item2": {
+    "amount": 1.0,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 30.0,
+    "object": []
+  },
+  "power": 1200
+}

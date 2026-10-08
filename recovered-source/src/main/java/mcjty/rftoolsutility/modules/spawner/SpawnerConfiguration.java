@@ -1,0 +1,42 @@
+package mcjty.rftoolsutility.modules.spawner;
+
+import mcjty.lib.varia.TagTools;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.common.ModConfigSpec.Builder;
+import net.neoforged.neoforge.common.ModConfigSpec.IntValue;
+
+public class SpawnerConfiguration {
+   public static final String CATEGORY_SPAWNER = "spawner";
+   public static final Identifier LIVING = Identifier.fromNamespaceAndPath("rftoolsutility", "living/living");
+   public static final TagKey<Item> TAG_LIVING = tagItem(LIVING);
+   public static final Identifier LOWYIELD = Identifier.fromNamespaceAndPath("rftoolsutility", "living/lowyield");
+   public static final TagKey<Item> TAG_LOWYIELD = tagItem(LOWYIELD);
+   public static final Identifier HIGHYIELD = Identifier.fromNamespaceAndPath("rftoolsutility", "living/highyield");
+   public static final TagKey<Item> TAG_HIGHYIELD = tagItem(HIGHYIELD);
+   public static final Identifier AVERAGEYIELD = Identifier.fromNamespaceAndPath("rftoolsutility", "living/averageyield");
+   public static final TagKey<Item> TAG_AVERAGEYIELD = tagItem(AVERAGEYIELD);
+   public static int SPAWNER_MAXENERGY = 200000;
+   public static int SPAWNER_RECEIVEPERTICK = 2000;
+   public static int BEAMER_MAXENERGY = 200000;
+   public static int BEAMER_RECEIVEPERTICK = 1000;
+   public static int beamRfPerObject = 2000;
+   public static int beamBlocksPerSend = 1;
+   public static int maxBeamDistance = 8;
+   public static int maxMatterStorage = 6400;
+   public static IntValue maxMobInjections;
+
+   private static TagKey<Item> tagItem(Identifier id) {
+      return TagTools.createItemTagKey(id);
+   }
+
+   public static void init(Builder SERVER_BUILDER, Builder CLIENT_BUILDER) {
+      SERVER_BUILDER.comment("Settings for the spawner system").push("spawner");
+      CLIENT_BUILDER.comment("Settings for the spawner system").push("spawner");
+      maxMobInjections = SERVER_BUILDER.comment("Maximum amount of injections we need to do a full mob extraction.")
+         .defineInRange("maxMobInjections", 10, 1, Integer.MAX_VALUE);
+      CLIENT_BUILDER.pop();
+      SERVER_BUILDER.pop();
+   }
+}

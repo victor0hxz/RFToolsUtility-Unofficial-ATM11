@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "rftoolsbase:machine_frame",
+    "P": "#c:bones",
+    "X": "#c:rods/blaze",
+    "o": "#c:ender_pearls",
+    "r": "minecraft:redstone",
+    "z": "minecraft:rotten_flesh"
+  },
+  "pattern": [
+    "rzr",
+    "oFX",
+    "rPr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:spawner"
+  }
+}

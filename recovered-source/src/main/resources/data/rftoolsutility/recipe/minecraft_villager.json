@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:villager",
+  "id": "rftoolsutility:minecraft_villager",
+  "item1": {
+    "amount": 0.1,
+    "object": "minecraft:book"
+  },
+  "item2": {
+    "amount": 5.0,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 30.0,
+    "object": []
+  },
+  "power": 2000
+}

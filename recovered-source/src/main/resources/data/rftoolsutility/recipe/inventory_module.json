@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": "#c:chests",
+    "Z": "#c:dyes/black",
+    "i": "#c:ingots/iron",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    " X ",
+    "rir",
+    " Z "
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:inventory_module"
+  }
+}

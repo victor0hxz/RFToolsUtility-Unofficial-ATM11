@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": "rftoolsbase:infused_diamond",
+    "i": "#c:ingots/iron",
+    "s": "rftoolsbase:dimensionalshard"
+  },
+  "pattern": [
+    "sis",
+    "iXi",
+    "sis"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:module_template"
+  }
+}

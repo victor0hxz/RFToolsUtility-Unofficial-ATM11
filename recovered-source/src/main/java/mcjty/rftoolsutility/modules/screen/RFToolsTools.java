@@ -1,0 +1,42 @@
+package mcjty.rftoolsutility.modules.screen;
+
+import java.util.HashMap;
+import java.util.Map;
+import mcjty.lib.api.information.CapabilityPowerInformation;
+import mcjty.lib.api.information.IPowerInformation;
+import mcjty.lib.varia.EnergyTools;
+import mcjty.lib.varia.EnergyTools.EnergyLevel;
+import mcjty.rftoolsutility.modules.screen.network.PacketReturnRfInRange;
+import mcjty.rftoolsutility.setup.RFToolsUtilityMessages;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
+public class RFToolsTools {
+   public static void returnRfInRange(Player player) {
+      BlockPos pos = player.blockPosition();
+      Level world = player.level();
+      Map<BlockPos, MachineInfo> result = new HashMap<>();
+      int range = 12;
+
+      for (int x = -range; x <= range; x++) {
+         for (int y = -range; y <= range; y++) {
+            for (int z = -range; z <= range; z++) {
+               BlockPos p = pos.offset(x, y, z);
+               BlockEntity te = world.getBlockEntity(p);
+               if (EnergyTools.isEnergyTE(te, null)) {
+                  EnergyLevel level = EnergyTools.getEnergyLevel(te, null);
+                  IPowerInformation powerInformation = (IPowerInformation)world.getCapability(CapabilityPowerInformation.POWER_INFORMATION_CAPABILITY, p, null);
+                  if (powerInformation != null) {
+                     Long usage = powerInformation.getEnergyDiffPerTick();
+                     result.put(p, new MachineInfo(level.energy(), level.maxEnergy(), usage));
+                  }
+               }
+            }
+         }
+      }
+
+      RFToolsUtilityMessages.sendToPlayer(PacketReturnRfInRange.create(result), player);
+   }
+}

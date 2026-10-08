@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Z": "#c:dyes/black",
+    "i": "#c:ingots/iron",
+    "p": "minecraft:paper",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    " p ",
+    "rir",
+    " Z "
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:text_module"
+  }
+}

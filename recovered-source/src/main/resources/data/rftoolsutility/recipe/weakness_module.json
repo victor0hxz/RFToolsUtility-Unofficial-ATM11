@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:piglin",
+  "pattern": {
+    "key": {
+      "P": "rftoolsutility:module_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:cactus"
+    },
+    "pattern": [
+      "fSf",
+      "fPf",
+      "fff"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:weakness_module"
+  },
+  "syringe": 1
+}

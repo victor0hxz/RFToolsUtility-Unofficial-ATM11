@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": "rftoolsutility:energy_module",
+    "o": "#c:ender_pearls",
+    "z": "#c:ingots/gold"
+  },
+  "pattern": [
+    " o ",
+    "zMz",
+    " o "
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:energyplus_module"
+  }
+}

@@ -1,0 +1,37 @@
+package mcjty.rftoolsutility.modules.logic.network;
+
+import mcjty.rftoolsutility.modules.logic.tools.RedstoneChannels;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload.Type;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.player.Player;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+
+public record PacketSetRedstone(Integer channel, Integer redstone) implements CustomPacketPayload {
+   public static final Identifier ID = Identifier.fromNamespaceAndPath("rftoolsutility", "setredstone");
+   public static final Type<PacketSetRedstone> TYPE = new Type(ID);
+   public static final StreamCodec<FriendlyByteBuf, PacketSetRedstone> CODEC = StreamCodec.composite(
+      ByteBufCodecs.INT, PacketSetRedstone::channel, ByteBufCodecs.INT, PacketSetRedstone::redstone, PacketSetRedstone::new
+   );
+
+   public static PacketSetRedstone create(int channel, int i) {
+      return new PacketSetRedstone(channel, i);
+   }
+
+   public Type<? extends CustomPacketPayload> type() {
+      return TYPE;
+   }
+
+   public void handle(IPayloadContext ctx) {
+      ctx.enqueueWork(() -> {
+         Player player = ctx.player();
+         RedstoneChannels channels = RedstoneChannels.getChannels(player.level());
+         RedstoneChannels.RedstoneChannel channel = channels.getChannel(this.channel);
+         channel.setValue(this.redstone);
+         channels.setDirty();
+      });
+   }
+}

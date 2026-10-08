@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "rftoolsbase:machine_frame",
+    "G": "#c:glass_blocks",
+    "o": "#c:ender_pearls",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "ror",
+    "GFG",
+    "rGr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:screen_controller"
+  }
+}

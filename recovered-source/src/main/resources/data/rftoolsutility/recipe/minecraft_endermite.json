@@ -1,0 +1,18 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:endermite",
+  "id": "rftoolsutility:minecraft_endermite",
+  "item1": {
+    "amount": 0.05,
+    "object": "#c:ender_pearls"
+  },
+  "item2": {
+    "amount": 0.2,
+    "object": "minecraft:end_stone"
+  },
+  "item3": {
+    "amount": 10.0,
+    "object": []
+  },
+  "power": 400
+}

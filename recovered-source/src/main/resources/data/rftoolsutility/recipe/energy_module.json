@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Z": "#c:dyes/black",
+    "i": "#c:ingots/iron",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    " r ",
+    "rir",
+    " Z "
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:energy_module"
+  }
+}

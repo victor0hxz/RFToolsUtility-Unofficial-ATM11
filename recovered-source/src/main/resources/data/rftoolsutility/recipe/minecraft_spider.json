@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:spider",
+  "id": "rftoolsutility:minecraft_spider",
+  "item1": {
+    "amount": 0.1,
+    "object": "minecraft:string"
+  },
+  "item2": {
+    "amount": 0.2,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 15.0,
+    "object": []
+  },
+  "power": 500
+}

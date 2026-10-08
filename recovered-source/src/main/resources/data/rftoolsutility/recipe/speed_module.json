@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:wolf",
+  "pattern": {
+    "key": {
+      "P": "rftoolsutility:module_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:powered_rail"
+    },
+    "pattern": [
+      "fSf",
+      "fPf",
+      "fff"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:speed_module"
+  },
+  "syringe": 1
+}

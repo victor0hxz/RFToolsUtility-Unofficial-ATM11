@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:zombie",
+  "pattern": {
+    "key": {
+      "P": "rftoolsutility:module_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:rotten_flesh"
+    },
+    "pattern": [
+      "fSf",
+      "fPf",
+      "fff"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:saturation_module"
+  },
+  "syringe": 1
+}

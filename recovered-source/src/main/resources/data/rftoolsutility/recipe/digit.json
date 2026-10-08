@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "rftoolsbase:machine_base",
+    "P": "#c:glass_panes",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "PPP",
+    "rAr",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:digit"
+  }
+}

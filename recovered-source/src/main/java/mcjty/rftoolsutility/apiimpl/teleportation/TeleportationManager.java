@@ -1,0 +1,68 @@
+package mcjty.rftoolsutility.apiimpl.teleportation;
+
+import mcjty.lib.blocks.BaseBlock;
+import mcjty.lib.varia.TeleportationTools;
+import mcjty.rftoolsbase.api.teleportation.ITeleportationManager;
+import mcjty.rftoolsutility.modules.teleporter.TeleportConfiguration;
+import mcjty.rftoolsutility.modules.teleporter.TeleporterModule;
+import mcjty.rftoolsutility.modules.teleporter.blocks.MatterReceiverTileEntity;
+import mcjty.rftoolsutility.modules.teleporter.data.MatterReceiverData;
+import mcjty.rftoolsutility.modules.teleporter.data.TeleportDestination;
+import mcjty.rftoolsutility.modules.teleporter.data.TeleportDestinations;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.GlobalPos;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+public class TeleportationManager implements ITeleportationManager {
+   public String getReceiverName(Level world, BlockPos pos) {
+      if (world.getBlockState(pos).getBlock() == TeleporterModule.MATTER_RECEIVER.block().get()) {
+         MatterReceiverTileEntity te = (MatterReceiverTileEntity)world.getBlockEntity(pos);
+         return te.getName();
+      } else {
+         return null;
+      }
+   }
+
+   public boolean createReceiver(Level world, BlockPos pos, String name, int power) {
+      world.setBlock(pos, ((BaseBlock)TeleporterModule.MATTER_RECEIVER.block().get()).defaultBlockState(), 2);
+      if (world.getBlockEntity(pos) instanceof MatterReceiverTileEntity te) {
+         if (power == -1) {
+            te.storeEnergy(((Integer)TeleportConfiguration.RECEIVER_MAXENERGY.get()).intValue());
+         } else {
+            te.storeEnergy(Math.min(power, (Integer)TeleportConfiguration.RECEIVER_MAXENERGY.get()));
+         }
+
+         te.setName(name);
+         te.setChanged();
+         this.registerReceiver(world, pos, name);
+      }
+
+      return true;
+   }
+
+   private void registerReceiver(Level world, BlockPos pos, String name) {
+      TeleportDestinations destinations = TeleportDestinations.get(world);
+      GlobalPos gc = GlobalPos.of(world.dimension(), pos);
+      TeleportDestination destination = destinations.addDestination(gc);
+      destination = destination.withName(name);
+      destinations.setDestination(gc, destination);
+      destinations.save();
+   }
+
+   public String getReceiverName(ItemStack matterReceiver) {
+      return ((MatterReceiverData)matterReceiver.getOrDefault(TeleporterModule.ITEM_MATTERRECEIVER_DATA, MatterReceiverData.DEFAULT)).name();
+   }
+
+   public void teleportPlayer(Player player, ResourceKey<Level> dimension, BlockPos location) {
+      TeleportationTools.teleportToDimension(player, dimension, location.getX(), location.getY(), location.getZ());
+   }
+
+   public void removeReceiverDestinations(Level world, ResourceKey<Level> dim) {
+      TeleportDestinations destinations = TeleportDestinations.get(world);
+      destinations.removeDestinationsInDimension(dim);
+      destinations.save();
+   }
+}

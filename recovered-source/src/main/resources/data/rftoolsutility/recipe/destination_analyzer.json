@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:comparator",
+    "F": "rftoolsbase:machine_frame",
+    "f": "minecraft:repeater",
+    "o": "#c:ender_pearls",
+    "q": "minecraft:quartz",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "ror",
+    "CFf",
+    "qrq"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:destination_analyzer"
+  }
+}

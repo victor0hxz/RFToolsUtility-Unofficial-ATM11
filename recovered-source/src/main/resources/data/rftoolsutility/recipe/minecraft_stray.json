@@ -1,0 +1,18 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:stray",
+  "id": "rftoolsutility:minecraft_stray",
+  "item1": {
+    "amount": 0.1,
+    "object": "#c:bones"
+  },
+  "item2": {
+    "amount": 0.5,
+    "object": "minecraft:netherrack"
+  },
+  "item3": {
+    "amount": 20.0,
+    "object": []
+  },
+  "power": 800
+}

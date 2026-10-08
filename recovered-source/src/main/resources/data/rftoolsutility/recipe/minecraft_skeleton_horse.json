@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:spawner",
+  "entity": "minecraft:skeleton_horse",
+  "id": "rftoolsutility:minecraft_skeleton_horse",
+  "item1": {
+    "amount": 0.1,
+    "object": "#c:bones"
+  },
+  "item2": {
+    "amount": 0.5,
+    "object": [
+      "minecraft:dirt",
+      "minecraft:gravel",
+      "minecraft:sand"
+    ]
+  },
+  "item3": {
+    "amount": 30.0,
+    "object": []
+  },
+  "power": 1000
+}

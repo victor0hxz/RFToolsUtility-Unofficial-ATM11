@@ -1,0 +1,22 @@
+{
+  "type": "rftoolsutility:syringe",
+  "group": "",
+  "mob": "minecraft:turtle",
+  "pattern": {
+    "key": {
+      "P": "rftoolsutility:module_template",
+      "S": "rftoolsutility:syringe",
+      "f": "minecraft:string"
+    },
+    "pattern": [
+      "fSf",
+      "fPf",
+      "fff"
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "rftoolsutility:slowness_module"
+  },
+  "syringe": 1
+}
